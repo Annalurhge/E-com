@@ -1,0 +1,47 @@
+ @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body{
+background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.box{
+   width: 1000px;
+   margin: 100px auto;
+   background: #c1e4d0;
+   border-radius: 7px;
+   box-shadow: 25px 20px 25px rgba(0,0,0,.3);
+}
+
+.box .heading{
+   background: #c1e4d0;
+   border-radius: 7px 7px 0px 0px;
+   padding: 15px;
+   color: #0d0d0e;
+   text-align: center;
+   font-family: "Lucida Console";
+}
+/*#F5DEB3 #835C3B*/
+.faqs{
+   padding: 0px 20px 20px;
+}
+
+::-webkit-details-marker{
+   float: right;
+   margin-top: 3px;
+}
+
+details{
+   background: #f6f6f6;
+   padding: 10px 20px;
+   border-radius: 7px;
+   margin-top: 20px;
+   font-family: "Rubik";
+   font-size: 14px;
+   letter-spacing: 1px;
+   cursor: pointer;
+}
+
+details summary{
+   outline: none;
+}
