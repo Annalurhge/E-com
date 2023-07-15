@@ -6,19 +6,44 @@
     /* CSS styling for the page */
     body {
       font-family: Arial, sans-serif;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(u.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       margin: 0;
       padding: 0;
     }
 
-    header {
-      background-color: rgb(128, 125, 125);
-      color: #fff;
-      padding: 20px;
+    .header-container {
       text-align: center;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, .6);
+      color: hsl(0, 0%, 3%);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header .title{
+      color: hsl(0, 12%, 95%);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+    }
+    header .logo {
+      margin-right: 20px;
+    }
+    
+    header .logo img {
+      height: 70px;
+      width: 70px;
     }
 
     h1 {
       margin: 0;
+      font-family: 'Courier New', Courier, monospace;
     }
 
     .container {
@@ -26,11 +51,16 @@
       margin: 0 auto;
     }
 
+    .container .text{
+      color: white;
+    }
+
     .checkout-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, .9);
       padding: 20px;
       margin-bottom: 20px;
     }
@@ -50,6 +80,7 @@
     .checkout-total {
       text-align: right;
       font-weight: bold;
+      color: white;
     }
 
     .checkout-button {
@@ -64,13 +95,18 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Kids Wardrobe</h1>
-    <p>Checkout</p>
+  <header class="header-container">
+    <div class="logo">
+      <img src="LG.png" width="70" height="70">
+    </div>
+    <div class="header-title">
+      <h1 class = "title"><b>Kids Wardrobe</b></h1>
+      <p>Checkout</p>
+    </div>
   </header>
 
   <div class="container">
-    <h2>Order Summary</h2>
+    <h2 class = "text">Order Summary</h2>
 
     <div class="checkout-items">
       <!-- Insert selected items from the cart dynamically using JavaScript -->
