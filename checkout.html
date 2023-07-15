@@ -22,30 +22,30 @@
     }
 
     .container {
-      max-width: 960px;
-      margin: 20px auto;
-      padding: 0 20px;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .checkout-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
     }
 
     .checkout-item img {
-      max-width: 100%;
+      max-width: 100px;
+      margin-right: 20px;
       height: auto;
-      margin-bottom: 10px;
     }
 
-    .checkout-item h2 {
-      margin: 0;
-    }
-
+    .checkout-item h2,
     .checkout-item p {
       margin: 0;
     }
+
 
     .checkout-total {
       text-align: right;
@@ -80,7 +80,7 @@
       <p>Total: $<span id="checkout-total-amount"></span></p>
     </div>
 
-    <a href="payment.html" class="checkout-button">Complete Purchase</a>
+    <a href="payment.html" class="checkout-button">Proceed to Payment</a>
   </div>
 
   <script>
@@ -101,23 +101,23 @@
           checkoutItem.classList.add('checkout-item');
 
           const image = document.createElement('img');
-          image.src = item.image;
+          image.src = item.image_src;
           image.alt = item.name;
-          checkoutItem.appendChild(image);
 
           const productName = document.createElement('h2');
           productName.textContent = item.name;
           checkoutItem.appendChild(productName);
 
           const productPrice = document.createElement('p');
-          productPrice.textContent = 'Price: $' + item.price;
+          productPrice.textContent = item.price;
           checkoutItem.appendChild(productPrice);
 
+          checkoutItem.appendChild(image);
           checkoutItemsContainer.appendChild(checkoutItem);
         });
-
+        
         const total = cartItems.reduce(function(acc, item) {
-          return acc + parseFloat(item.price);
+          return acc + parseFloat(item.price.replace(/[^0-9.]/g, ''));
         }, 0);
 
         checkoutTotalAmount.textContent = total.toFixed(2);
