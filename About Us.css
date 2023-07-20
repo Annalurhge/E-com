@@ -5,6 +5,15 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
+.back{
+	background: #3d4178;
+	text-align: center;
+	color: white;
+	padding: 12px;
+	border-radius: 25px;
+	cursor: pointer;
+	width: 150px;
+}
 .section{
 	width: 100%;
 	min-height: 150vh;

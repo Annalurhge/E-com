@@ -12,7 +12,15 @@ background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(bg.jpg);
    border-radius: 7px;
    box-shadow: 25px 20px 25px rgba(0,0,0,.3);
 }
-
+.back{
+	background: #3d4178;
+	text-align: center;
+	color: white;
+	padding: 12px;
+	border-radius: 25px;
+	cursor: pointer;
+	width: 10%;
+}
 .box .heading{
    background: #c1e4d0;
    border-radius: 7px 7px 0px 0px;
